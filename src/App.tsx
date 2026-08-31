@@ -7,6 +7,7 @@ import { Process } from "./components/Process";
 import { Evaluation } from "./components/Evaluation";
 import { Top50 } from "./components/Top50";
 import { Preparation } from "./components/Preparation";
+import { AIIntegrity } from "./components/AIIntegrity";
 import { EventDetails } from "./components/EventDetails";
 import { FAQ } from "./components/FAQ";
 import { FinalCTA } from "./components/FinalCTA";
@@ -44,6 +45,9 @@ export function App() {
 
         {/* Actionable Preparation Section */}
         <Preparation />
+
+        {/* AI Usage & Plagiarism Policy (Red Theme) */}
+        <AIIntegrity />
 
         {/* Official Event Details Grid */}
         <EventDetails />

@@ -45,41 +45,42 @@ export const Navbar = () => {
     <header
       className={`sticky top-0 z-40 w-full transition-all duration-300 ${
         isScrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-200/80 py-3"
-          : "bg-white/95 border-b border-slate-100 py-4"
-      }`}
+          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200/90 py-4 sm:py-5 min-h-[85px] sm:min-h-[95px]"
+          : "bg-white border-b border-slate-100 py-5 sm:py-6 min-h-[92px] sm:min-h-[105px]"
+      } flex items-center`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Left Side: SB Jain College Logo & Identification */}
-        <div className="flex items-center gap-3">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
+        
+        {/* Left Side: Large SB Jain College Logo & Identification */}
+        <div className="flex items-center gap-3 sm:gap-4">
           <a
             href="#hero"
             onClick={(e) => {
               e.preventDefault();
               handleNavClick("#hero");
             }}
-            className="flex items-center gap-3 group"
+            className="flex items-center gap-3 sm:gap-3.5 group"
           >
-            <div className="h-11 sm:h-12 w-auto flex items-center justify-center p-1 bg-white rounded-md border border-slate-100 shadow-sm group-hover:border-slate-300 transition-colors">
+            <div className="h-14 sm:h-[68px] w-auto flex items-center justify-center p-1.5 bg-white rounded-lg border border-slate-100 shadow-sm group-hover:border-slate-300 transition-colors">
               <img
                 src="/assets/college-logo.png"
                 alt="S.B. Jain Institute of Technology Logo"
-                className="h-full w-auto max-h-10 object-contain"
+                className="h-full w-auto max-h-12 sm:max-h-16 object-contain"
               />
             </div>
-            <div className="hidden sm:flex flex-col text-left">
-              <span className="font-bold text-xs tracking-wider text-slate-900 uppercase">
-                S.B. Jain Institute
+            <div className="hidden sm:flex flex-col text-left justify-center">
+              <span className="font-black text-sm sm:text-base tracking-wider text-slate-900 uppercase leading-snug">
+                S.B. JAIN INSTITUTE
               </span>
-              <span className="text-[10px] tracking-tight text-slate-500 font-medium">
+              <span className="text-xs tracking-tight text-slate-500 font-medium">
                 An Autonomous Institute • SIH Cell
               </span>
             </div>
           </a>
         </div>
 
-        {/* Center Navigation Links (Desktop) */}
-        <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+        {/* Center Navigation Links (Desktop) - Breathable & Spaced */}
+        <nav className="hidden lg:flex items-center gap-3 xl:gap-6">
           {NAV_LINKS.map((link) => {
             const isActive = activeSection === link.href.substring(1);
             return (
@@ -90,10 +91,10 @@ export const Navbar = () => {
                   e.preventDefault();
                   handleNavClick(link.href);
                 }}
-                className={`px-3 py-1.5 text-xs xl:text-sm font-semibold tracking-wide transition-all rounded-md ${
+                className={`px-3 py-2 text-sm sm:text-[15px] font-bold tracking-wider transition-all rounded-md ${
                   isActive
-                    ? "text-[#EA580C] bg-orange-50/80 font-bold"
-                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+                    ? "text-[#EA580C] bg-orange-50 font-black"
+                    : "text-slate-600 hover:text-slate-950 hover:bg-slate-50"
                 }`}
               >
                 {link.label}
@@ -102,35 +103,35 @@ export const Navbar = () => {
           })}
         </nav>
 
-        {/* Right Side: SIH Logo & CTA Button */}
-        <div className="flex items-center gap-3 sm:gap-4">
-          {/* Official SIH Logo */}
-          <div className="flex items-center h-10 sm:h-11 px-2 py-0.5 bg-slate-50 rounded-md border border-slate-200/60">
+        {/* Right Side: Larger SIH Logo & Scaled CTA Button */}
+        <div className="flex items-center gap-3 sm:gap-5">
+          {/* Official SIH Logo Container */}
+          <div className="flex items-center h-12 sm:h-14 px-2.5 py-1 bg-white rounded-lg border border-slate-200/80 shadow-xs">
             <img
               src="/assets/sih-logo.png"
               alt="Smart India Hackathon Logo"
-              className="h-full w-auto object-contain"
+              className="h-full w-auto max-h-10 sm:max-h-12 object-contain"
             />
           </div>
 
-          {/* Primary CTA (scrolls to preparation section) */}
+          {/* Primary CTA (Proportionally larger) */}
           <a
             href="#preparation"
             onClick={(e) => {
               e.preventDefault();
               handleNavClick("#preparation");
             }}
-            className="hidden md:inline-flex items-center gap-1.5 px-4 py-2 bg-[#EA580C] hover:bg-[#C2410C] text-white text-xs font-bold uppercase tracking-wider rounded-md shadow-sm hover:shadow-md transition-all duration-200"
+            className="hidden md:inline-flex items-center gap-2 h-11 sm:h-12 px-5 sm:px-6 bg-[#EA580C] hover:bg-[#C2410C] text-white text-xs sm:text-sm font-bold uppercase tracking-wider rounded-lg shadow-sm hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5"
           >
             <span>PREPARE NOW</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
+            <ArrowUpRight className="w-4 h-4" />
           </a>
 
           {/* Mobile Hamburger Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle navigation menu"
-            className="p-2 text-slate-700 hover:text-slate-900 lg:hidden rounded-md hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="p-2.5 text-slate-700 hover:text-slate-900 lg:hidden rounded-lg hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-orange-500"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
