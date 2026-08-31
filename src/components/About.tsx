@@ -2,47 +2,47 @@ import { ShieldCheck, Target, Award, ArrowUpRight, Sparkles } from "lucide-react
 
 export const About = () => {
   return (
-    <section id="about" className="py-16 md:py-24 bg-white relative">
+    <section id="about" className="py-12 sm:py-16 md:py-24 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Grid: Editorial & Illustration */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center mb-12 sm:mb-16">
           
           {/* Left Column: Heading & Information */}
           <div className="lg:col-span-7 text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-orange-50 border border-orange-200/80 rounded-full text-xs font-bold text-[#EA580C] tracking-wider uppercase mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-orange-50 border border-orange-200/80 rounded-full text-[11px] sm:text-xs font-bold text-[#EA580C] tracking-wider uppercase mb-3">
               <Sparkles className="w-3.5 h-3.5" />
               <span>ABOUT THE SELECTION ROUND</span>
             </div>
             
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-950 tracking-tight leading-tight">
+            <h2 className="text-2xl min-[400px]:text-3xl sm:text-4xl md:text-5xl font-black text-slate-950 tracking-tight leading-[1.15]">
               THIS IS YOUR <br className="hidden sm:inline" />
               <span className="text-[#EA580C]">SELECTION ROUND.</span>
             </h2>
             
-            <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+            <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed">
               The College Level Internal Hackathon is the central internal selection round for{" "}
               <strong className="text-slate-900 font-bold">Smart India Hackathon 2026</strong>. 
               Teams will present their problem statement, idea and PPT, followed by a demonstration of their working or functional prototype.
             </p>
 
             {/* TOP 50 Callout Card */}
-            <div className="mt-8 p-6 sm:p-8 bg-slate-50 border border-slate-200 rounded-2xl relative overflow-hidden shadow-sm hover:shadow-xl hover:border-orange-300 hover:-translate-y-1.5 transition-all duration-300">
-              <div className="absolute -right-10 -bottom-10 opacity-5 pointer-events-none select-none text-[160px] font-black leading-none text-slate-900">
+            <div className="mt-6 sm:mt-8 p-5 sm:p-8 bg-slate-50 border border-slate-200 rounded-2xl relative overflow-hidden shadow-sm hover:shadow-xl hover:border-orange-300 hover:-translate-y-1.5 transition-all duration-300">
+              <div className="absolute -right-10 -bottom-10 opacity-5 pointer-events-none select-none text-[120px] sm:text-[160px] font-black leading-none text-slate-900">
                 50
               </div>
               <div className="relative z-10">
                 <span className="text-xs font-bold tracking-widest text-[#EA580C] uppercase block mb-1">
                   SELECTION GOAL
                 </span>
-                <div className="text-4xl sm:text-5xl font-black text-slate-950 tracking-tighter mb-1">
+                <div className="text-3xl min-[400px]:text-4xl sm:text-5xl font-black text-slate-950 tracking-tighter mb-1">
                   TOP 50 TEAMS
                 </div>
-                <p className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed mt-2">
+                <p className="text-xs sm:text-sm md:text-base text-slate-700 font-medium leading-relaxed mt-2">
                   The best <strong className="text-slate-950 font-bold">50 performing teams</strong> will be shortlisted based on their performance in this Internal Hackathon for participation in{" "}
                   <strong className="text-[#EA580C] font-bold">Smart India Hackathon (SIH) 2026</strong>.
                 </p>
-                <div className="mt-4 inline-flex items-center gap-2 text-xs font-bold text-slate-900 uppercase tracking-wider">
+                <div className="mt-3 sm:mt-4 inline-flex items-center gap-2 text-xs font-bold text-slate-900 uppercase tracking-wider">
                   <span>Centralized College Nomination</span>
                   <ArrowUpRight className="w-4 h-4 text-[#EA580C]" />
                 </div>
@@ -51,15 +51,15 @@ export const About = () => {
           </div>
 
           {/* Right Column: Custom SIH Hackathon 2026 Isometric 3D Graphic */}
-          <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-md bg-gradient-to-b from-orange-50/50 via-slate-50 to-emerald-50/30 border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:border-orange-300 hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center">
+          <div className="lg:col-span-5 flex justify-center w-full">
+            <div className="relative w-full max-w-sm sm:max-w-md bg-gradient-to-b from-orange-50/50 via-slate-50 to-emerald-50/30 border border-slate-200 rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:border-orange-300 hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center">
               
               {/* Badge */}
-              <div className="w-full flex items-center justify-between border-b border-slate-200/60 pb-3 mb-4">
-                <span className="text-[11px] font-bold tracking-wider uppercase text-slate-600">
+              <div className="w-full flex items-center justify-between border-b border-slate-200/60 pb-2.5 sm:pb-3 mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-[11px] font-bold tracking-wider uppercase text-slate-600">
                   SIH 2026 CREATIVE IDENTITY
                 </span>
-                <span className="text-[10px] font-mono font-bold px-2 py-0.5 bg-[#EA580C] text-white rounded">
+                <span className="text-[9px] sm:text-[10px] font-mono font-bold px-2 py-0.5 bg-[#EA580C] text-white rounded">
                   BUILD & DEMO
                 </span>
               </div>

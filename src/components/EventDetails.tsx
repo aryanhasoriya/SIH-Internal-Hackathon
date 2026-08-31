@@ -64,28 +64,28 @@ export const EventDetails = () => {
   ];
 
   return (
-    <section id="details" className="py-16 md:py-24 bg-slate-50 border-t border-slate-200/80 relative">
+    <section id="details" className="py-12 sm:py-16 md:py-24 bg-slate-50 border-t border-slate-200/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-bold text-slate-800 tracking-wider uppercase mb-3">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-slate-200 rounded-full text-[11px] sm:text-xs font-bold text-slate-800 tracking-wider uppercase mb-3">
             <span>OFFICIAL SPECIFICATIONS</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-950 tracking-tight">
+          <h2 className="text-2xl min-[400px]:text-3xl sm:text-4xl md:text-5xl font-black text-slate-950 tracking-tight">
             EVENT DETAILS
           </h2>
-          <p className="mt-3 text-base text-slate-600">
+          <p className="mt-2 sm:mt-3 text-sm sm:text-base text-slate-600">
             Verified facts and parameters from the official announcement.
           </p>
         </div>
 
         {/* Spec Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-6 text-left">
           {details.map((item, idx) => (
             <div
               key={idx}
-              className={`p-6 rounded-2xl border transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl ${
+              className={`p-4 sm:p-6 rounded-2xl border transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl ${
                 item.highlight
                   ? "bg-white border-[#EA580C] shadow-md ring-1 ring-orange-500/20 hover:border-[#EA580C] hover:ring-2"
                   : item.highlightGreen
@@ -93,8 +93,8 @@ export const EventDetails = () => {
                   : "bg-white border-slate-200 hover:border-orange-300 shadow-xs"
               }`}
             >
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-xs font-bold tracking-widest text-slate-400 uppercase">
+              <div className="flex items-center justify-between mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-xs font-bold tracking-widest text-slate-400 uppercase">
                   {item.label}
                 </span>
                 <div className="p-2 bg-slate-50 rounded-lg border border-slate-100 group-hover:bg-orange-50 transition-colors">
@@ -102,11 +102,11 @@ export const EventDetails = () => {
                 </div>
               </div>
 
-              <div className="text-lg sm:text-xl font-black text-slate-950 mb-1">
+              <div className="text-base sm:text-lg md:text-xl font-black text-slate-950 mb-1 leading-snug">
                 {item.value}
               </div>
 
-              <div className="text-xs sm:text-sm font-semibold text-slate-500">
+              <div className="text-[11px] sm:text-xs md:text-sm font-semibold text-slate-500">
                 {item.subValue}
               </div>
             </div>

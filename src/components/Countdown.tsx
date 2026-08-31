@@ -85,26 +85,26 @@ export const Countdown = () => {
         </div>
 
         {timeLeft.isExpired ? (
-          <div className="text-center p-8 bg-slate-800/80 border border-orange-500/30 rounded-2xl max-w-xl mx-auto shadow-2xl">
-            <Sparkles className="w-10 h-10 text-orange-400 mx-auto mb-3 animate-bounce" />
-            <h3 className="text-3xl font-black tracking-tight text-white mb-2">
+          <div className="text-center p-6 sm:p-8 bg-slate-800/80 border border-orange-500/30 rounded-2xl max-w-xl mx-auto shadow-2xl">
+            <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 text-orange-400 mx-auto mb-3 animate-bounce" />
+            <h3 className="text-2xl sm:text-3xl font-black tracking-tight text-white mb-2">
               HACKATHON DAY
             </h3>
-            <p className="text-lg text-orange-400 font-bold tracking-widest uppercase">
+            <p className="text-base sm:text-lg text-orange-400 font-bold tracking-widest uppercase">
               LET'S BUILD!
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 max-w-3xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 md:gap-6 max-w-3xl mx-auto">
             {timeUnits.map((unit) => (
               <div
                 key={unit.label}
-                className="p-4 sm:p-6 bg-slate-800/90 border border-slate-700/70 rounded-xl text-center shadow-lg transform hover:-translate-y-1 transition-transform"
+                className="p-3 sm:p-5 md:p-6 bg-slate-800/90 border border-slate-700/70 rounded-xl text-center shadow-lg hover:-translate-y-1.5 hover:shadow-2xl hover:border-orange-500/50 transition-all duration-300 cursor-default"
               >
-                <div className="text-3xl sm:text-5xl font-black text-white font-mono tracking-tight mb-1">
+                <div className="text-2xl min-[380px]:text-3xl sm:text-4xl md:text-5xl font-black text-white font-mono tracking-tight mb-1">
                   {String(unit.value).padStart(2, "0")}
                 </div>
-                <div className="text-[10px] sm:text-xs font-bold tracking-widest text-slate-400 uppercase">
+                <div className="text-[9px] min-[380px]:text-[10px] sm:text-xs font-bold tracking-widest text-slate-400 uppercase">
                   {unit.label}
                 </div>
               </div>

@@ -23,26 +23,26 @@ export const Process = () => {
         </div>
 
         {/* Step Tabs / Indicator */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 mb-8 sm:mb-10">
           {PROCESS_STEPS.map((item, idx) => (
             <button
               key={item.step}
               onClick={() => setActiveStep(idx)}
-              className={`p-4 rounded-xl border text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-md ${
+              className={`p-3 sm:p-4 rounded-xl border text-left transition-all duration-300 min-h-[54px] flex flex-col justify-between hover:-translate-y-1 hover:shadow-md ${
                 activeStep === idx
                   ? "bg-white border-[#EA580C] shadow-md ring-2 ring-orange-500/20"
                   : "bg-white/60 border-slate-200 hover:bg-white hover:border-orange-200"
               }`}
             >
-              <div className="flex items-center justify-between mb-2">
-                <span className={`text-xs font-mono font-black ${activeStep === idx ? "text-[#EA580C]" : "text-slate-400"}`}>
+              <div className="flex items-center justify-between mb-1 sm:mb-2 w-full">
+                <span className={`text-[10px] sm:text-xs font-mono font-black ${activeStep === idx ? "text-[#EA580C]" : "text-slate-400"}`}>
                   STEP {item.step}
                 </span>
                 {activeStep > idx && (
-                  <Check className="w-3.5 h-3.5 text-emerald-600" />
+                  <Check className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-emerald-600" />
                 )}
               </div>
-              <div className="font-bold text-sm sm:text-base text-slate-900">
+              <div className="font-bold text-xs sm:text-sm md:text-base text-slate-900 leading-tight">
                 {item.title}
               </div>
             </button>
@@ -50,27 +50,27 @@ export const Process = () => {
         </div>
 
         {/* Active Step Feature Display */}
-        <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-10 shadow-lg hover:shadow-2xl hover:border-orange-200 hover:-translate-y-1 transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="bg-white border border-slate-200 rounded-2xl p-5 sm:p-8 md:p-10 shadow-lg hover:shadow-2xl hover:border-orange-200 hover:-translate-y-1 transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
           
           {/* Left Text */}
           <div className="lg:col-span-6 text-left">
-            <div className="inline-flex items-center gap-2 px-2.5 py-1 bg-orange-50 rounded text-xs font-bold text-[#EA580C] uppercase tracking-wider mb-3">
+            <div className="inline-flex items-center gap-2 px-2.5 py-1 bg-orange-50 rounded text-[11px] sm:text-xs font-bold text-[#EA580C] uppercase tracking-wider mb-2.5 sm:mb-3">
               <span>STEP {PROCESS_STEPS[activeStep].step} OF 04</span>
             </div>
             
-            <h3 className="text-2xl sm:text-3xl font-black text-slate-950 mb-2">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-slate-950 mb-2 leading-tight">
               {PROCESS_STEPS[activeStep].title} — {PROCESS_STEPS[activeStep].subtitle}
             </h3>
             
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed my-4">
+            <p className="text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed my-3 sm:my-4">
               {PROCESS_STEPS[activeStep].description}
             </p>
 
-            <div className="mt-6 pt-6 border-t border-slate-100 flex items-center gap-3">
+            <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-slate-100 flex items-center gap-3">
               {activeStep < PROCESS_STEPS.length - 1 ? (
                 <button
                   onClick={() => setActiveStep((prev) => prev + 1)}
-                  className="btn-primary text-xs uppercase tracking-wider py-2.5 px-4"
+                  className="btn-primary w-full sm:w-auto min-h-[44px] text-xs sm:text-sm uppercase tracking-wider py-2.5 px-4"
                 >
                   <span>NEXT: STEP 0{activeStep + 2}</span>
                   <ChevronRight className="w-4 h-4" />
@@ -78,7 +78,7 @@ export const Process = () => {
               ) : (
                 <a
                   href="#evaluation"
-                  className="btn-primary text-xs uppercase tracking-wider py-2.5 px-4"
+                  className="btn-primary w-full sm:w-auto min-h-[44px] text-xs sm:text-sm uppercase tracking-wider py-2.5 px-4"
                 >
                   <span>VIEW EVALUATION FLOW</span>
                   <ChevronRight className="w-4 h-4" />
@@ -88,8 +88,8 @@ export const Process = () => {
           </div>
 
           {/* Right Reference Illustration */}
-          <div className="lg:col-span-6 flex justify-center">
-            <div className="w-full max-w-md h-64 sm:h-80 bg-slate-50 rounded-xl border border-slate-100 p-4 flex items-center justify-center overflow-hidden hover:shadow-md transition-shadow">
+          <div className="lg:col-span-6 flex justify-center w-full">
+            <div className="w-full max-w-sm sm:max-w-md h-48 sm:h-64 md:h-80 bg-slate-50 rounded-xl border border-slate-100 p-3 sm:p-4 flex items-center justify-center overflow-hidden hover:shadow-md transition-shadow">
               <img
                 src={PROCESS_STEPS[activeStep].image}
                 alt={PROCESS_STEPS[activeStep].title}
@@ -101,16 +101,16 @@ export const Process = () => {
         </div>
 
         {/* 4 Cards Grid View for complete overview */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-8 sm:mt-12">
           {PROCESS_STEPS.map((item, idx) => (
             <div
               key={item.step}
               onClick={() => setActiveStep(idx)}
-              className={`p-5 bg-white rounded-xl border cursor-pointer transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl ${
+              className={`p-4 sm:p-5 bg-white rounded-xl border cursor-pointer transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl ${
                 activeStep === idx ? "border-[#EA580C] shadow-md ring-1 ring-orange-500/20" : "border-slate-200 hover:border-orange-300"
               }`}
             >
-              <div className="w-full h-36 bg-slate-50 rounded-lg mb-4 flex items-center justify-center p-2 overflow-hidden">
+              <div className="w-full h-32 sm:h-36 bg-slate-50 rounded-lg mb-3 sm:mb-4 flex items-center justify-center p-2 overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -120,10 +120,10 @@ export const Process = () => {
               <div className="text-xs font-mono font-bold text-[#EA580C] mb-1">
                 STEP {item.step}
               </div>
-              <h4 className="font-bold text-slate-900 text-base mb-1">
+              <h4 className="font-bold text-slate-900 text-sm sm:text-base mb-1">
                 {item.title}
               </h4>
-              <p className="text-xs text-slate-600 line-clamp-2">
+              <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed">
                 {item.description}
               </p>
             </div>
