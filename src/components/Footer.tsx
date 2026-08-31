@@ -86,7 +86,7 @@ export const Footer = () => {
             © 2026 College SIH Cell. All rights reserved.
           </div>
           <div className="text-slate-200 text-sm sm:text-base font-bold tracking-wide">
-            Behind the Code : <span className="text-orange-400 font-black">Emergicon Technical Team</span>
+            Behind the Code : <span className="text-orange-400 font-black">Emergicon ACM-Technical Team</span>
           </div>
         </div>
 
