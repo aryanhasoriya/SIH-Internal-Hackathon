@@ -85,8 +85,8 @@ export const Footer = () => {
           <div>
             © 2026 College SIH Cell. All rights reserved.
           </div>
-          <div className="text-slate-400 text-[11px]">
-            College Level Internal Hackathon 2026 • Selection Round for SIH 2026
+          <div className="text-slate-200 text-sm sm:text-base font-bold tracking-wide">
+            Behind the Code : <span className="text-orange-400 font-black">Emergicon Technical Team</span>
           </div>
         </div>
 
