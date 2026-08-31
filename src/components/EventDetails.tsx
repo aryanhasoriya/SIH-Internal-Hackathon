@@ -1,4 +1,4 @@
-import { Calendar, Layers, FileText, Cpu, Users, UserCheck } from "lucide-react";
+import { Calendar, Layers, FileText, Cpu, Users, UserCheck, MapPin, Clock, Phone } from "lucide-react";
 import { EVENT_INFO } from "../constants/eventData";
 
 export const EventDetails = () => {
@@ -8,6 +8,20 @@ export const EventDetails = () => {
       label: "DATE",
       value: EVENT_INFO.dateFormatted,
       subValue: "01 SEPTEMBER 2026",
+      highlight: true,
+    },
+    {
+      icon: <Clock className="w-5 h-5 text-[#EA580C]" />,
+      label: "TIMING",
+      value: EVENT_INFO.time,
+      subValue: "FULL DAY HACKATHON SCHEDULE",
+      highlight: true,
+    },
+    {
+      icon: <MapPin className="w-5 h-5 text-[#EA580C]" />,
+      label: "VENUE",
+      value: EVENT_INFO.venue,
+      subValue: "CENTRAL COLLEGE CAMPUS",
       highlight: true,
     },
     {
@@ -34,6 +48,12 @@ export const EventDetails = () => {
       label: "EVALUATION",
       value: "EXTERNAL JUDGES",
       subValue: "INDEPENDENT INDUSTRY EVALUATION",
+    },
+    {
+      icon: <Phone className="w-5 h-5 text-slate-700" />,
+      label: "FOR QUERIES CONTACT",
+      value: EVENT_INFO.contact,
+      subValue: "STUDENT & COORDINATOR HELPLINE",
     },
     {
       icon: <UserCheck className="w-5 h-5 text-slate-700" />,
