@@ -27,7 +27,7 @@ export const About = () => {
             </p>
 
             {/* TOP 50 Callout Card */}
-            <div className="mt-8 p-6 sm:p-8 bg-slate-50 border border-slate-200 rounded-2xl relative overflow-hidden shadow-sm">
+            <div className="mt-8 p-6 sm:p-8 bg-slate-50 border border-slate-200 rounded-2xl relative overflow-hidden shadow-sm hover:shadow-xl hover:border-orange-300 hover:-translate-y-1.5 transition-all duration-300">
               <div className="absolute -right-10 -bottom-10 opacity-5 pointer-events-none select-none text-[160px] font-black leading-none text-slate-900">
                 50
               </div>
@@ -52,7 +52,7 @@ export const About = () => {
 
           {/* Right Column: Custom SIH Hackathon 2026 Isometric 3D Graphic */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-md bg-gradient-to-b from-orange-50/50 via-slate-50 to-emerald-50/30 border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-xl shadow-slate-200/50 flex flex-col items-center text-center">
+            <div className="relative w-full max-w-md bg-gradient-to-b from-orange-50/50 via-slate-50 to-emerald-50/30 border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:border-orange-300 hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center">
               
               {/* Badge */}
               <div className="w-full flex items-center justify-between border-b border-slate-200/60 pb-3 mb-4">
@@ -90,7 +90,7 @@ export const About = () => {
         {/* 3 Core Pillars */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
-          <div className="p-6 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-slate-300 hover:shadow-md transition-all text-left">
+          <div className="p-6 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-orange-300 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 text-left">
             <div className="w-12 h-12 rounded-lg bg-orange-50 border border-orange-200/60 flex items-center justify-center text-[#EA580C] mb-4">
               <Target className="w-6 h-6" />
             </div>
@@ -102,7 +102,7 @@ export const About = () => {
             </p>
           </div>
 
-          <div className="p-6 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-slate-300 hover:shadow-md transition-all text-left">
+          <div className="p-6 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-emerald-300 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 text-left">
             <div className="w-12 h-12 rounded-lg bg-emerald-50 border border-emerald-200/60 flex items-center justify-center text-emerald-600 mb-4">
               <ShieldCheck className="w-6 h-6" />
             </div>
@@ -114,7 +114,7 @@ export const About = () => {
             </p>
           </div>
 
-          <div className="p-6 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-slate-300 hover:shadow-md transition-all text-left">
+          <div className="p-6 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-slate-400 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 text-left">
             <div className="w-12 h-12 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-800 mb-4">
               <Award className="w-6 h-6" />
             </div>

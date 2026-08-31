@@ -48,10 +48,10 @@ export const FAQ = () => {
               return (
                 <div
                   key={idx}
-                  className={`border rounded-xl transition-all duration-200 overflow-hidden ${
+                  className={`border rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md overflow-hidden ${
                     isOpen
-                      ? "bg-slate-50 border-slate-300 shadow-sm"
-                      : "bg-white border-slate-200 hover:border-slate-300"
+                      ? "bg-slate-50 border-[#EA580C]/40 shadow-sm"
+                      : "bg-white border-slate-200 hover:border-orange-200"
                   }`}
                 >
                   <button

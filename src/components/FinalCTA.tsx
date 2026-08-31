@@ -54,9 +54,9 @@ export const FinalCTA = () => {
         </div>
 
         {/* Logos & Official Notice Footer Box */}
-        <div className="p-8 bg-slate-800/80 border border-slate-700/80 rounded-2xl max-w-2xl mx-auto backdrop-blur-sm">
+        <div className="p-8 bg-slate-800/80 border border-slate-700/80 rounded-2xl max-w-2xl mx-auto backdrop-blur-sm hover:shadow-2xl hover:border-orange-500/40 hover:-translate-y-1 transition-all duration-300">
           <div className="flex items-center justify-center gap-6 mb-6">
-            <div className="h-12 bg-white p-1.5 rounded-md">
+            <div className="h-12 bg-white p-1.5 rounded-md hover:scale-105 transition-transform">
               <img
                 src="/assets/college-logo.png"
                 alt="College Logo"
@@ -64,7 +64,7 @@ export const FinalCTA = () => {
               />
             </div>
             <div className="h-6 w-px bg-slate-700" />
-            <div className="h-12 bg-white p-1.5 rounded-md">
+            <div className="h-12 bg-white p-1.5 rounded-md hover:scale-105 transition-transform">
               <img
                 src="/assets/sih-logo.png"
                 alt="SIH Logo"

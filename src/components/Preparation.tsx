@@ -1,4 +1,4 @@
-import { Target, Presentation, Cpu, MessageSquareCheck, ArrowRight } from "lucide-react";
+import { Target, Presentation, Cpu, MessageSquareCheck } from "lucide-react";
 import { PREPARATION_CARDS } from "../constants/eventData";
 
 export const Preparation = () => {
@@ -38,14 +38,14 @@ export const Preparation = () => {
           {PREPARATION_CARDS.map((card) => (
             <div
               key={card.number}
-              className="p-6 bg-slate-50/70 border border-slate-200 rounded-2xl hover:bg-white hover:border-slate-300 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
+              className="p-6 bg-slate-50/70 border border-slate-200 rounded-2xl hover:bg-white hover:border-orange-300 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group cursor-default"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-xs font-mono font-black px-2.5 py-1 bg-white border border-slate-200 rounded-md text-slate-800 shadow-2xs group-hover:border-orange-300">
                     {card.number}
                   </span>
-                  <div className="p-2 bg-white rounded-lg border border-slate-100 shadow-2xs">
+                  <div className="p-2 bg-white rounded-lg border border-slate-100 shadow-2xs group-hover:shadow-md transition-shadow">
                     {getIcon(card.title)}
                   </div>
                 </div>
@@ -62,17 +62,12 @@ export const Preparation = () => {
                   {card.description}
                 </p>
               </div>
-
-              <div className="mt-6 pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs font-bold text-slate-700 group-hover:text-[#EA580C]">
-                <span>PREPARE EFFECTIVELY</span>
-                <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
-              </div>
             </div>
           ))}
         </div>
 
         {/* SPOC Note Banner */}
-        <div className="mt-14 p-6 sm:p-8 bg-gradient-to-r from-orange-50 via-amber-50/60 to-emerald-50/60 border border-orange-200/80 rounded-2xl text-center max-w-3xl mx-auto shadow-sm">
+        <div className="mt-14 p-6 sm:p-8 bg-gradient-to-r from-orange-50 via-amber-50/60 to-emerald-50/60 border border-orange-200/80 rounded-2xl text-center max-w-3xl mx-auto shadow-sm hover:shadow-xl hover:border-orange-300 hover:-translate-y-1 transition-all duration-300">
           <p className="text-base sm:text-lg font-bold text-slate-900">
             "Give your best and make your team among the Top 50!"
           </p>

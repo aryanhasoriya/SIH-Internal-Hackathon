@@ -72,7 +72,7 @@ export const Top50 = () => {
               {EVENT_INFO.shortlistText}
             </p>
 
-            <div className="mt-6 p-4 bg-slate-900 border border-slate-800 rounded-xl">
+            <div className="mt-6 p-4 bg-slate-900 border border-slate-800 rounded-xl hover:border-orange-500/40 hover:-translate-y-1 transition-all duration-300">
               <p className="text-xs sm:text-sm font-semibold text-orange-300 uppercase tracking-wide">
                 "Only the strongest-performing teams will move forward to the Smart India Hackathon 2026 selection."
               </p>
@@ -82,7 +82,7 @@ export const Top50 = () => {
           {/* Right Column: High-Impact Highlight Cards */}
           <div className="lg:col-span-6 space-y-4 text-left">
             
-            <div className="p-6 bg-slate-900/90 border border-slate-800 hover:border-orange-500/40 rounded-2xl transition-all shadow-xl">
+            <div className="p-6 bg-slate-900/90 border border-slate-800 hover:border-orange-500/60 rounded-2xl hover:-translate-y-1.5 transition-all duration-300 shadow-xl hover:shadow-2xl">
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-orange-500/10 rounded-xl text-orange-400 border border-orange-500/20">
                   <Award className="w-6 h-6" />
@@ -98,7 +98,7 @@ export const Top50 = () => {
               </div>
             </div>
 
-            <div className="p-6 bg-slate-900/90 border border-slate-800 hover:border-emerald-500/40 rounded-2xl transition-all shadow-xl">
+            <div className="p-6 bg-slate-900/90 border border-slate-800 hover:border-emerald-500/60 rounded-2xl hover:-translate-y-1.5 transition-all duration-300 shadow-xl hover:shadow-2xl">
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-emerald-500/10 rounded-xl text-emerald-400 border border-emerald-500/20">
                   <ShieldCheck className="w-6 h-6" />
@@ -114,7 +114,7 @@ export const Top50 = () => {
               </div>
             </div>
 
-            <div className="p-6 bg-slate-900/90 border border-slate-800 hover:border-blue-500/40 rounded-2xl transition-all shadow-xl">
+            <div className="p-6 bg-slate-900/90 border border-slate-800 hover:border-blue-500/60 rounded-2xl hover:-translate-y-1.5 transition-all duration-300 shadow-xl hover:shadow-2xl">
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-blue-500/10 rounded-xl text-blue-400 border border-blue-500/20">
                   <Zap className="w-6 h-6" />

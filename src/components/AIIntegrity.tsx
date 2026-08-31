@@ -29,11 +29,11 @@ export const AIIntegrity = () => {
             </p>
 
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-bold text-slate-700">
-              <div className="flex items-center gap-2 p-3 bg-white/80 border border-[#FECACA] rounded-xl shadow-2xs">
+              <div className="flex items-center gap-2 p-3 bg-white/80 border border-[#FECACA] rounded-xl shadow-2xs hover:shadow-md hover:border-red-300 hover:-translate-y-0.5 transition-all duration-300 cursor-default">
                 <AlertTriangle className="w-4 h-4 text-[#DC2626] flex-shrink-0" />
                 <span>Zero AI Generation Permitted</span>
               </div>
-              <div className="flex items-center gap-2 p-3 bg-white/80 border border-[#FECACA] rounded-xl shadow-2xs">
+              <div className="flex items-center gap-2 p-3 bg-white/80 border border-[#FECACA] rounded-xl shadow-2xs hover:shadow-md hover:border-emerald-300 hover:-translate-y-0.5 transition-all duration-300 cursor-default">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
                 <span>100% Team Authored Code</span>
               </div>
@@ -42,7 +42,7 @@ export const AIIntegrity = () => {
 
           {/* Right Column: White Information Card */}
           <div className="lg:col-span-6 text-left">
-            <div className="bg-white border border-[#FECACA] rounded-2xl p-6 sm:p-10 shadow-xl shadow-red-900/5 relative overflow-hidden">
+            <div className="bg-white border border-[#FECACA] rounded-2xl p-6 sm:p-10 shadow-xl shadow-red-900/5 hover:shadow-2xl hover:border-red-300 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden">
               
               {/* Corner badge */}
               <div className="flex items-center justify-between border-b border-red-100 pb-4 mb-6">

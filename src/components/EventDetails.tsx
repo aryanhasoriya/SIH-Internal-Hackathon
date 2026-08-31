@@ -85,19 +85,19 @@ export const EventDetails = () => {
           {details.map((item, idx) => (
             <div
               key={idx}
-              className={`p-6 rounded-2xl border transition-all duration-200 ${
+              className={`p-6 rounded-2xl border transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl ${
                 item.highlight
-                  ? "bg-white border-[#EA580C] shadow-md ring-1 ring-orange-500/20"
+                  ? "bg-white border-[#EA580C] shadow-md ring-1 ring-orange-500/20 hover:border-[#EA580C] hover:ring-2"
                   : item.highlightGreen
-                  ? "bg-white border-emerald-500 shadow-md ring-1 ring-emerald-500/20"
-                  : "bg-white border-slate-200 hover:border-slate-300 shadow-xs hover:shadow-sm"
+                  ? "bg-white border-emerald-500 shadow-md ring-1 ring-emerald-500/20 hover:border-emerald-600 hover:ring-2"
+                  : "bg-white border-slate-200 hover:border-orange-300 shadow-xs"
               }`}
             >
               <div className="flex items-center justify-between mb-4">
                 <span className="text-xs font-bold tracking-widest text-slate-400 uppercase">
                   {item.label}
                 </span>
-                <div className="p-2 bg-slate-50 rounded-lg border border-slate-100">
+                <div className="p-2 bg-slate-50 rounded-lg border border-slate-100 group-hover:bg-orange-50 transition-colors">
                   {item.icon}
                 </div>
               </div>

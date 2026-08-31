@@ -28,10 +28,10 @@ export const Process = () => {
             <button
               key={item.step}
               onClick={() => setActiveStep(idx)}
-              className={`p-4 rounded-xl border text-left transition-all ${
+              className={`p-4 rounded-xl border text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-md ${
                 activeStep === idx
                   ? "bg-white border-[#EA580C] shadow-md ring-2 ring-orange-500/20"
-                  : "bg-white/60 border-slate-200 hover:bg-white hover:border-slate-300"
+                  : "bg-white/60 border-slate-200 hover:bg-white hover:border-orange-200"
               }`}
             >
               <div className="flex items-center justify-between mb-2">
@@ -50,7 +50,7 @@ export const Process = () => {
         </div>
 
         {/* Active Step Feature Display */}
-        <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-10 shadow-lg grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-10 shadow-lg hover:shadow-2xl hover:border-orange-200 hover:-translate-y-1 transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
           {/* Left Text */}
           <div className="lg:col-span-6 text-left">
@@ -89,7 +89,7 @@ export const Process = () => {
 
           {/* Right Reference Illustration */}
           <div className="lg:col-span-6 flex justify-center">
-            <div className="w-full max-w-md h-64 sm:h-80 bg-slate-50 rounded-xl border border-slate-100 p-4 flex items-center justify-center overflow-hidden">
+            <div className="w-full max-w-md h-64 sm:h-80 bg-slate-50 rounded-xl border border-slate-100 p-4 flex items-center justify-center overflow-hidden hover:shadow-md transition-shadow">
               <img
                 src={PROCESS_STEPS[activeStep].image}
                 alt={PROCESS_STEPS[activeStep].title}
@@ -106,15 +106,15 @@ export const Process = () => {
             <div
               key={item.step}
               onClick={() => setActiveStep(idx)}
-              className={`p-5 bg-white rounded-xl border cursor-pointer transition-all ${
-                activeStep === idx ? "border-[#EA580C] shadow-md" : "border-slate-200 hover:border-slate-300"
+              className={`p-5 bg-white rounded-xl border cursor-pointer transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl ${
+                activeStep === idx ? "border-[#EA580C] shadow-md ring-1 ring-orange-500/20" : "border-slate-200 hover:border-orange-300"
               }`}
             >
               <div className="w-full h-36 bg-slate-50 rounded-lg mb-4 flex items-center justify-center p-2 overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="max-h-full max-w-full object-contain"
+                  className="max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="text-xs font-mono font-bold text-[#EA580C] mb-1">

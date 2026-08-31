@@ -29,7 +29,7 @@ export const Evaluation = () => {
             {EVALUATION_FLOW.map((flow, index) => (
               <div
                 key={flow.step}
-                className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:border-[#EA580C] hover:shadow-md transition-all text-left flex flex-col justify-between"
+                className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:border-[#EA580C] hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 text-left flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
@@ -57,7 +57,7 @@ export const Evaluation = () => {
         </div>
 
         {/* External Judge Assurance Note */}
-        <div className="mt-12 p-6 bg-slate-50 border border-slate-200 rounded-xl text-center max-w-2xl mx-auto">
+        <div className="mt-12 p-6 bg-slate-50 border border-slate-200 rounded-xl text-center max-w-2xl mx-auto shadow-xs hover:shadow-lg hover:border-orange-300 hover:-translate-y-1 transition-all duration-300">
           <p className="text-sm font-semibold text-slate-700">
             "Only performance and technical demonstration determine the shortlist. Prepare your pitch and prototype with precision."
           </p>
