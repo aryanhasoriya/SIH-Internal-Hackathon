@@ -2,6 +2,7 @@
 // Source of truth: Official College SIH Announcement
 
 export const HACKATHON_DATE = "2026-09-01"; // Configurable countdown date target
+export const HACKATHON_TARGET_ISO = "2026-09-01T10:30:00+05:30"; // 1 September 2026 10:30 AM IST (Asia/Kolkata)
 
 export const EVENT_INFO = {
   name: "College Level Internal Hackathon 2026",

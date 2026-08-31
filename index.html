@@ -279,7 +279,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="text-center mb-6 sm:mb-8">
         <div class="inline-flex items-center gap-2 px-3 py-1 bg-slate-800/80 border border-slate-700/80 rounded-full text-[11px] sm:text-xs font-bold text-orange-400 tracking-wider uppercase mb-2">
-          <span>COUNTDOWN TO HACKATHON DAY</span>
+          <span id="countdown-badge">COUNTDOWN TO HACKATHON DAY</span>
         </div>
         <h2 class="text-lg sm:text-2xl font-bold tracking-tight text-slate-100 flex items-center justify-center gap-2">
           <span>01 SEPTEMBER 2026</span>
@@ -306,7 +306,7 @@
       </div>
 
       <div class="text-center mt-4 sm:mt-6">
-        <p class="text-xs text-slate-400 font-medium">
+        <p id="countdown-subtext" class="text-xs text-slate-400 font-medium">
           Central internal selection round for Smart India Hackathon 2026
         </p>
       </div>
@@ -958,17 +958,22 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // 3. Countdown Timer Calculation
+    // 3. Exact IST Countdown Timer Calculation (1 September 2026 10:30 AM IST)
+    const TARGET_IST_TIMESTAMP = new Date('2026-09-01T10:30:00+05:30').getTime();
+
     function updateCountdown() {
-      const target = new Date('2026-09-01T00:00:00').getTime();
-      const now = new Date().getTime();
-      const diff = target - now;
+      const now = Date.now();
+      const diff = TARGET_IST_TIMESTAMP - now;
+      const badgeEl = document.getElementById('countdown-badge');
+      const subtextEl = document.getElementById('countdown-subtext');
 
       if (diff <= 0) {
         document.getElementById('countdown-days').innerText = '00';
         document.getElementById('countdown-hours').innerText = '00';
         document.getElementById('countdown-minutes').innerText = '00';
         document.getElementById('countdown-seconds').innerText = '00';
+        if (badgeEl) badgeEl.innerText = 'HACKATHON DAY IS HERE!';
+        if (subtextEl) subtextEl.innerText = 'The College Level Internal Hackathon 2026 has begun.';
         return;
       }
 
@@ -985,6 +990,10 @@
 
     updateCountdown();
     setInterval(updateCountdown, 1000);
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') updateCountdown();
+    });
+    window.addEventListener('focus', updateCountdown);
 
     // 4. FAQ Accordion Interaction
     document.querySelectorAll('.faq-btn').forEach(btn => {
